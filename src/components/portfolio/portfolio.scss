@@ -1,90 +1,5 @@
 @import "../../global.scss";
 
-// .portfolio {
-//     background-color: whitesmoke;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-
-//     h2{
-//         font-size: 50px;
-//         margin-top: 50px;
-//         overflow: hidden;
-//     }
-//     .container {
-//         width: 70%;
-//         height: 100%;
-//         margin-top: 50px;
-//         display: flex;
-//         justify-content: center;
-
-//         .item {
-//             flex: 0.5;
-//             box-shadow: 10px 5px 5px lightslategrey;
-//             height: 250px;
-//             border-radius: 10px;
-//             margin: 10px;
-//             display: flex;
-//             justify-content: center;
-//             color: white;
-//             position: relative;
-
-//             .titre1 {
-//                 position: absolute;
-//                 display: flex;
-//                 flex-direction: column;
-//                 justify-content: center;
-//                 text-align: center;
-//                 font-size: 30px;
-//                 align-items: center;
-//                 top: 15%;
-//             }
-
-//             .titre2 {
-//                 position: absolute;
-//                 display: flex;
-//                 flex-direction: column;
-//                 justify-content: center;
-//                 text-align: center;
-//                 font-size: 30px;
-//                 align-items: center;
-//                 bottom: 15%;
-
-//                 p {
-//                     font-size: 20px;
-//                     margin-top: 20px;
-//                 }
-//             }
-
-//             a {
-//                 text-decoration: none;
-//                 color: white;
-
-//                 &:hover {
-//                     font-weight: bold;
-//                     color: #0e7183;
-//                 }
-//             }
-
-//             img {
-//                 object-fit: cover;
-//                 z-index: 1;
-//             }
-
-//             &:hover {
-//                 color: white;
-//                 background-color: $mainColor;
-//                 img {
-                    
-//                     opacity: 0.3;
-//                     z-index: 0;
-//                 }
-//             }
-//         }
-//     }
-    
-// }
-
 .portfolio {
     background-color: whitesmoke;
     display: flex;
@@ -96,18 +11,38 @@
         position: absolute;
         top: 20px;
         font-size: 60px;
+        @include mobil {
+            font-size: 30px;
+        }
     }
 
     .container {
         width: 90%;
         height: 100%;
         margin-top: 100px;
-        display: flex;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        //grid-auto-rows: minmax(100px, auto);
+        justify-content: space-between;
+        @include mobil {
+            width: 100%;
+            grid-template-columns: repeat(1, 1fr);
+        }
 
         .cards {
             height: 450px;
-            margin-right: 25px;
+            margin: 0 auto;
+            transition: all 1s ease;
+            @include mobil {
+                margin-top: 50px;
+                //padding:150px;
+                width: 100%;
+                display: grid;
+            }
+        }
+        .cards:hover {
+            transform: scale(1.1);
         }
     }
 }

@@ -1,3 +1,125 @@
+@import "../../global.scss";
+
 .works {
-    background-color: lightgreen;
+    background-color: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    .title {
+        position: absolute;
+        top: 20px;
+        font-size: 60px;
+        color: black;
+        @include mobil {
+            font-size: 15px;
+        }
+    }
+
+    #arrowLeft {
+        position: absolute;
+        left: 25%;
+        font-size: 60px;
+        color: $mainColor;
+        cursor: pointer;
+        @include mobil {
+            left: 5%;
+            bottom: 20%;
+        }
+
+    }
+
+    #arrowRight {
+        position: absolute;
+        right: 25%;
+        font-size: 60px;
+        color: $mainColor;
+        cursor: pointer;
+        @include mobil {
+            right: 5%;
+            bottom: 20%;
+        }
+
+    }
+
+    .slider {
+        height: 500px;
+        display: flex;
+        position: absolute;
+        left: 0;
+        transition: all 1s ease-in-out;
+
+        .container {
+            height: 400px;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .item {
+                width: 700px;
+                height: 90%;
+                background-color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-shadow: 10px 10px 2px 1px rgba(10, 245, 245, 0.2);
+                @include mobil {
+                    width: 90%;
+                    margin: 0 auto;
+                }
+
+                .left {
+                    flex: 5;
+                    height: 80%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include mobil {
+                        flex: 8;
+                    }
+
+                    .leftContainer {
+                        width: 90%;
+                        height: 70%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        h6 {
+                            font-size: 20px;
+                        }
+                        p {
+                            font-size: 13px;
+                            color: $mainColor;
+                        }
+
+                    }
+                }
+                .right {
+                    flex: 7;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    overflow: hidden;
+                    @include mobil {
+                        flex: 4;
+                    }
+
+                    img {
+                        width: 80%;
+                    }
+                    img:hover {
+                        width: 100%;
+                        transform: scale(3);
+                        border-radius: 50%;
+                    }
+
+                }
+
+            }
+        }
+    }
 }

@@ -44,7 +44,7 @@ export default function Contact() {
   const succesMessage = () => {
     let formMess = document.querySelector('.form-message');
 
-    formMess.innerHTML = "Merci pour votre message ! Je vous contact au plus vite."
+    formMess.innerHTML = "Merci pour votre message ! Je vous contacte au plus vite."
     formMess.style.background ="#ee0e89";
     formMess.style.color =" #f2f2f2";
     formMess.style.opacity = '1';
@@ -95,7 +95,7 @@ export default function Contact() {
         );
   };
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <form className="contact-form">
         <h2>Contactez moi</h2>
         <div className="form-content">

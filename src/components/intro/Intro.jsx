@@ -27,8 +27,8 @@ export default function Intro() {
       <div className="wrapper">
           <h2>Salut tout le monde, moi c'est</h2>
           <h1>Sylvain Campos</h1>
-          <h6>Développeur Web <span ref={textRef}></span></h6>
-          <Modal/>
+          <h6>Développeur Web <br /><span ref={textRef}></span></h6>
+          <Modal className="cv"/>
         </div>
         <a href="#portfolio">
           <KeyboardArrowDown fontSize="large" id="linkPortfolio"/>

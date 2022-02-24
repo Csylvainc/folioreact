@@ -1,9 +1,20 @@
+@import "../../global.scss";
+
 .intro {
     background-color: whitesmoke;
     display: flex;
 
+    @include mobil{
+        flex-direction:column;
+        align-items: center;
+    }
+
     .left {
         flex: 0.5;
+
+        @include mobil {
+           max-height: 250px;
+        }
         
         .imageContainer {
             width: 700px;
@@ -14,9 +25,19 @@
             transform: translateX(-100px) translateY(50px);
             overflow: hidden;
 
+            @include mobil {
+                height: 200px;
+                align-items: end;
+                transform: translateY(-40px);
+            }
+
             img {
                 height: 90%;
-                transform: translateX(-150px) translateY(70px);
+                
+
+                @include mobil{
+                    transform: translateX(150px) translateY(30px);
+                }
             }
         }
     }
@@ -32,15 +53,30 @@
             flex-direction: column;
             justify-content: center;
 
+            @include mobil {
+                width: 100%;
+                padding-left: 0;
+                justify-content: center;
+            }
+
             h1{
                 font-size: 60px;
                 margin: 10px 0;
+                @include mobil {
+                    font-size: 35px;
+                }
             }
             h2{
                 font-size: 25px;
+                @include mobil {
+                    font-size: 20px;
+                }
             }
             h6 {
                 font-size: 30px;
+                @include mobil {
+                    font-size: 20px;
+                }
 
                 span {
                     font-size: inherit;
@@ -61,12 +97,17 @@
             }
 
         }
+
         a{
             position: absolute;
             bottom: 10px;
-            // left: 1%;
+            @include mobil {
+                bottom:0px;
+                left: 40%;
+            }
         }
-        #linkPortfolio{
+        #linkPortfolio {
+           font-size: 80px; 
            animation: clignotte 2s infinite; 
         }
 
@@ -74,6 +115,10 @@
             100% {
                 opacity: 0;
             }
+        }
+
+        .cv {
+            display: none;
         }
     }
 }
