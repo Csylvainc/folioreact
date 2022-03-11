@@ -17,8 +17,8 @@
         }
         
         .imageContainer {
-            width: 700px;
-            height: 700px;
+            width: 500px;
+            height: 500px;
             background-color: #2ae9b9;
             border-radius: 50%;
             align-items: center;
@@ -33,6 +33,7 @@
 
             img {
                 height: 90%;
+                transform: translateY(50px);
                 
 
                 @include mobil{

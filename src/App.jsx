@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Topbar from "./components/topbar/Topbar";
 import Intro from "./components/intro/Intro";
 import Portfolio from "./components/portfolio/Portfolio";
@@ -19,7 +19,7 @@ function App() {
         <Portfolio/>
         <Works/>
         <Contact/>
-        <Footer/>
+
       </div>
     </div>
   );
